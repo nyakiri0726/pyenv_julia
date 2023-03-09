@@ -1,0 +1,18 @@
+{
+    "name": "dev-container2",
+    "dockerFile": "../dockerfile",
+    // "workspaceFolder": "/workspaces/container",
+    // "workspaceMount": "source=${localWorkspaceFolder}, target=/workspace/container,type=bind,consistency=cached",
+    "postCreateCommand": "/bin/bash ./postCreateCommand.sh",
+    "extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-python.black-formatter",
+		"njpwerner.autodocstring",
+		"mosapride.zenkaku",
+		"oderwat.indent-rainbow",
+		"christian-kohler.path-intellisense",
+		"0h7z.vscode-julia-format",
+		"julialang.language-julia"
+	],
+}

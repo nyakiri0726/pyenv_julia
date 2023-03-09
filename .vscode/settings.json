@@ -1,0 +1,51 @@
+{
+    //isort
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    //black
+    "editor.formatOnSave": true,
+    // "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.provider": "black",
+    //flake8
+    "python.linting.lintOnSave": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E203, W503",
+        // E203: ":"の前の空白を入れないルール
+        // W503: 演算子の前に改行しないようにするルール
+        "--max-complexity=10",
+    ],
+    //autoDocstring
+    "autoDocstring.docstringFormat": "google",
+    "python.linting.mypyEnabled": true,
+    // ミニマップを非表示にする
+    "editor.minimap.enabled": false,
+    // 制御文字を表示する(https://qiita.com/rana_kualu/items/3b03961deb003a8a2f1d)
+    "editor.renderControlCharacters": true,
+    // サジェスト一覧の初期表示項目設定
+    "editor.suggestSelection": "first",
+    // ファイルのパンくずリストを表示する
+    "breadcrumbs.enabled": true,
+    // ファイルの末尾を改行で終わらせる
+    "files.insertFinalNewline": true,
+    // 選択行の行番号をハイライトする
+    "editor.renderLineHighlight": "all",
+    // カーソルが滑らかに点滅するように
+    "editor.cursorBlinking": "smooth",
+    // カーソルの点滅をアニメーション表示する
+    "editor.cursorSmoothCaretAnimation": "on",
+    // カーソルの外観をブロックに変更
+    "editor.cursorStyle": "block",
+    // ファイルの自動エンコードを実施
+    "files.autoGuessEncoding": true,
+    // 画面全体の表示サイズはデフォルト
+    "window.zoomLevel": 0,
+    // 括弧の対応を色付ける
+    "editor.bracketPairColorization.enabled": true,
+    "black-formatter.path": [
+        "/usr/local/bin/black"
+    ],
+}
