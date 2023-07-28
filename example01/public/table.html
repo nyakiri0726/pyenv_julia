@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+</html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genie :: The highly productive Julia web framework</title>
+
+
+    </html>
+    <!-- Bootstrap -->
+    <link href="/css/genie/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/genie/style.css" rel="stylesheet">
+    <link href="/css/genie/table.css" rel="stylesheet">
+    <link href="/css/genie/filter.css" rel="stylesheet">
+    <!-- <link href="/css/genie/color.css" rel="stylesheet"> -->
+
+</head>
+<!-- JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="js/genie/filter.js"></script>
+<!-- <script src="js/genie/color.js"></script> -->
+
+
+<body>
+    <!-- <h1>This is my page</h1> -->
+    <span style="font-size: 32px;  display: block;">This is my page</span>
+    <div id="table">
+        <input type="search" class="search" placeholder="検索🔍" />
+        <!-- <input type="checkbox" id="men" checked>男
+        <input type="checkbox" id="women" checked>女 -->
+        <table class="tableArea">
+            <thead>
+                <tr>
+                    <th class="sort" data-sort="name">名前</th>
+                    <th class="sort" data-sort="age">年齢</th>
+                    <th class="sort" data-sort="place">出身</th>
+                    <th class="sort" data-sort="sex">性別</th>
+                    <th class="sort" data-sort="test">test</th>
+                </tr>
+            </thead>
+            <tbody class="list">
+                <tr>
+                    <td class="name">田中</td>
+                    <td class="age">24</td>
+                    <td class="place">福岡</td>
+                    <td class="sex">男</td>
+                    <td class="test">てすと</td>
+                </tr>
+                <tr>
+                    <td class="name">tanaka</td>
+                    <td class="age">24</td>
+                    <td class="place">fukuoka</td>
+                    <td class="sex">male</td>
+                    <td class="test">てすと</td>
+                </tr>
+                <tr>
+                    <td class="name">田中</td>
+                    <td class="age">24</td>
+                    <td class="place">fukuoka</td>
+                    <td class="sex">男</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">鈴木</td>
+                    <td class="age">22</td>
+                    <td class="place">熊本</td>
+                    <td class="sex">男</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">佐藤</td>
+                    <td class="age">30</td>
+                    <td class="place">鹿児島</td>
+                    <td class="sex">女</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">高橋</td>
+                    <td class="age">27</td>
+                    <td class="place">宮崎</td>
+                    <td class="sex">男</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">伊藤</td>
+                    <td class="age">33</td>
+                    <td class="place">大分</td>
+                    <td class="sex">男</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">渡辺</td>
+                    <td class="age">24</td>
+                    <td class="place">佐賀</td>
+                    <td class="sex">女</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">中村</td>
+                    <td class="age">29</td>
+                    <td class="place">長崎</td>
+                    <td class="sex">女</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">山本</td>
+                    <td class="age">25</td>
+                    <td class="place">熊本</td>
+                    <td class="sex">男</td>
+                    <td class="test">てすと</td>
+
+                </tr>
+                <tr>
+                    <td class="name">青木</td>
+                    <td class="age">30</td>
+                    <td class="place">宮崎</td>
+                    <td class="sex">女</td>
+                    <td class="test">まりも</td>
+
+                </tr>
+                <tr>
+                    <td class="name">村上</td>
+                    <td class="age">24</td>
+                    <td class="place">熊本</td>
+                    <td class="sex">男</td>
+                    <td class="test">あいす</td>
+
+                </tr>
+                <tr>
+                    <td class="name">山田</td>
+                    <td class="age">31</td>
+                    <td class="place">鹿児島<br />大阪</td>
+                    <td class="sex">男</td>
+                    <td class="test">てと</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div class="pager">
+            <ul class="pagination"></ul>
+        </div>
+    </div>
+</body>
+<script>
+    /**
+ * List.js用のオプション設定
+ */
+    var options = {
+        // 並び替え項目
+        valueNames: ['name', 'age', 'place', 'sex', 'test'],
+        // １ページに表示するデータ数
+        page: 5,
+        // ページネーション
+        pagination: {
+            paginationClass: 'pagination',
+            innerWindow: 1,
+            outerWindow: 1,
+        },
+    };
+
+    /**
+     * List.jsのインスタンス生成
+     */
+    var userList = new List('table', options);
+
+    /**
+     * フィルター処理
+     */
+    function filter() {
+        // List.jsのフィルタリング
+        userList.filter(
+            function (item) {
+
+                // 男のチェックボックスにチェックがついていて、データが男の場合
+                if (sex_men.checked && item.values()['sex'] == '男') {
+                    // 表示する
+                    return true;
+                }
+                // 女のチェックボックスにチェックがついていて、データが女の場合
+                else if (sex_women.checked && item.values()['sex'] == '女') {
+                    // 表示する
+                    return true;
+                }
+                // 上記以外の場合
+                else {
+                    // 表示しない
+                    return false;
+                }
+            }
+        );
+    }
+
+    /**
+     * 男のチェックボックス
+     */
+    var sex_men = document.getElementById("men");
+    sex_men.addEventListener('change', filter);
+
+    /**
+     * 女のチェックボックス
+     */
+    var sex_women = document.getElementById("women");
+    sex_women.addEventListener('change', filter);
+
+    // フィルター処理
+    filter();
+</script>

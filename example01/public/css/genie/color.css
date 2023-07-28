@@ -1,0 +1,13 @@
+/* --- 明細のｎ行にカーソルが乗ったとき ---------- */
+.tableArea tr:hover {
+    background: #acf2ac !important;
+    /* 背景色    */
+}
+
+/* --- セルにカーソルが乗ったとき --------------- */
+.tableArea td:hover {
+    background: #ff7f50 !important;
+    /* 背景色    */
+    color: #ffffff !important;
+    /* 文字色    */
+}
