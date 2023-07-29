@@ -8,28 +8,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Genie :: The highly productive Julia web framework</title>
-
-
-    </html>
     <!-- Bootstrap -->
     <link href="/css/genie/bootstrap.min.css" rel="stylesheet">
     <link href="/css/genie/style.css" rel="stylesheet">
     <link href="/css/genie/table.css" rel="stylesheet">
     <link href="/css/genie/filter.css" rel="stylesheet">
+    <!-- <link href="/css/genie/header.css" rel="stylesheet"> -->
+    <link href="/css/genie/acordion.css" rel="stylesheet">
+    <link href="/css/genie/acordion2.css" rel="stylesheet">
+    <link href="/css/genie/drop.css" rel="stylesheet">
+
+
+
     <!-- <link href="/css/genie/color.css" rel="stylesheet"> -->
 
 </head>
+<header>
+    <h1>
+        <a href="/">RICO NOTES</a>
+    </h1>
+    <!-- <nav class="pc-nav">
+        <ul>
+
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav> -->
+    <nav>
+        <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#">About</a></li>
+            <li class="has-child"><a href="#">Service</a>
+                <ul>
+                    <li><a href="#">Service Top</a></li>
+                    <li><a href="#">Service-1</a></li>
+                    <li class="has-child"><a href="#">Service-2</a>
+                        <ul>
+                            <li><a href="#">Service-2 Top</a></li>
+                            <li><a href="#">Service-2-1</a></li>
+                            <li><a href="#">Service-2-2</a></li>
+                            <li><a href="#">Service-2-3</a></li>
+                            <li><a href="#">Service-2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Service-3</a></li>
+                </ul>
+            </li>
+            <li class="has-child"><a href="#">Blog</a>
+                <ul>
+                    <li><a href="#">Blog Top</a></li>
+                    <li><a href="#">Blog-1</a></li>
+                    <li><a href="#">Blog-2</a></li>
+                    <li><a href="#">Blog-3</a></li>
+                    <li><a href="#">Blog-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</header>
 <!-- JavaScript -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <script src="js/genie/filter.js"></script>
+<script src="js/genie/acordion2.js"></script>
+<script src="js/genie/drop.js"></script>
+
+
 <!-- <script src="js/genie/color.js"></script> -->
 
 
 <body>
+
     <!-- <h1>This is my page</h1> -->
     <span style="font-size: 32px;  display: block;">This is my page</span>
+    <div class="menu">
+        <label for="menu_bar01">アコーディオン１</label>
+        <input type="checkbox" id="menu_bar01" />
+        <ul id="links01">
+            <li><a href="">Link01</a></li>
+            <li><a href="">Link02</a></li>
+            <li><a href="">Link03</a></li>
+            <li><a href="">Link04</a></li>
+        </ul>
+    </div>
+
     <div id="table">
         <input type="search" class="search" placeholder="検索🔍" />
         <!-- <input type="checkbox" id="men" checked>男
